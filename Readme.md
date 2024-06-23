@@ -1,6 +1,8 @@
 # Introduction to Git Github
 
-Here we are mastering Git Github and other Version Control System. Here we will learn both theoratical and practical perspective.
+Here we are mastering Git Github and other Version Control System. 
+
+Here we will learn both theoratical and practical perspective.
 
 Here we learn not only git github commands but how the workflow of git works when we actually design a software.
 
@@ -37,13 +39,39 @@ We will see behind the seen about git.
     - It makes a sanpshot of all the changes .
 
 ***Work flow of git :*** 
-```Bash
-Working Dir -> git add -> Stagging Area -> git commit -> git push -> Github
-```
-    
 
+> Working Dir -> git add -> Stagging Area -> git commit -> git push -> Github
 
+### Git commits and logs
 
+- **`git add `** - move the file to stagging area.
+- **`git status`** - Show tracked and untracked files.
+- Stagging area is an intermediate zone before making any commit.
+- **`git rm -cached <file>`** - unstage the file.
+- `git commit` - commit needs a message , reason to commit the file.
+- `git commit -m "<msg>"`
+
+**Stage Area**
+    - `git init`
+    - create file or files
+    - git add `file1` `file2` || git add .
+    - `git status`
+
+**Commit**
+    - `git commit -m "a good descriptive message"`
+    - `git status`
+    - Repeat two three times
+    - `git log` -> gives commit id , Author , Date , commit msg
+    - `git log --oneline` -> shorter and in one line 
+
+**Atomic Commits**
+- Keep commit centric to `one feature` , one component or one fix. Focused one one thing.
+- `Present of Past` commit message
+    - Depends {Present tense , Imperative}
+    - give order to code base.
+    - Don't care.
+
+- git config --global   
 
 
 
