@@ -71,7 +71,27 @@ We will see behind the seen about git.
     - give order to code base.
     - Don't care.
 
-- git config --global   
+### Git internal working and configs
 
+- `git config --global code.editor "code --wait` -> changes default editor to vs code.
+
+- There are two ways to configure configuration fils
+    1. Global
+    2. Local
+
+- Set a Git username : `git config --global user.name "<username>"`
+- Set a Git email : `git config --global user.email "<email>"`
+
+- `.gitignore`
+    - Don't track some files & folders
+    - node modules , API Key, Secret
+    - get template online , pattern can be tricky
+
+- **Commit behinde the scene**
+    - In the world of git every commit is depneded on previous commit.
+    - Every commit has hash value and info about parent commit 
+
+- **Branches**
+    -
 
 

@@ -21,3 +21,10 @@
 
 > `git log --oneline` -> shorter and in one line 
 
+> `git config --global code.editor "code --wait` -> changes default editor to vs code.
+
+> Set a Git username : `git config --global user.name "<username>"`
+
+> Set a Git email : `git config --global user.email "<email>"`
+
+> `.gitignore` -> Don't track some files or folders mentioned in this file
