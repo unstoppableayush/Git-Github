@@ -51,13 +51,13 @@ We will see behind the seen about git.
 - `git commit` - commit needs a message , reason to commit the file.
 - `git commit -m "<msg>"`
 
-**Stage Area**
+- **Stage Area**
     - `git init`
     - create file or files
     - git add `file1` `file2` || git add .
     - `git status`
 
-**Commit**
+- **Commit**
     - `git commit -m "a good descriptive message"`
     - `git status`
     - Repeat two three times
@@ -91,7 +91,32 @@ We will see behind the seen about git.
     - In the world of git every commit is depneded on previous commit.
     - Every commit has hash value and info about parent commit 
 
+### Git merge and git conflicts
+
 - **Branches**
-    -
+    - Like an alternative timeline.
+    - You are always on some branch.
+    - Create new : `git branch <BRANCH_NAME>`
+    - Switch to other Branch : `git checkout <BRANCH_NAME>`
+    - Check current branch : `git branch`
+    - Create a branch & move there : `git switch -c <BRANCH_NAME>` , `git switch -c <BRANCH_NAME>`
+    - commit before switching to another branch
+    - go to .git folder & checkout HEAD file
 
+- **HEAD**
+    - Head points to where a branch is currently at
 
+- **Merging the branches**
+    1. Fast Forward Merge
+        - `git switch master` & `git merge bugfix`
+        -  Git will move the `master `branch pointer to the latest commit on the `bugfix` branch without creating a merge commit.
+        - Possible only if there is no divergence between branches.
+    
+    2. Not Fast Forward Merge
+        - `git switch master` & `git merge --no-ff bugfix`
+        - Merge the `bugfix` branch into `master` with a merge commit.
+
+    - Git Tries best to resolve conflicts
+        - Above ===== represents the `master` branch changes.
+        - Below ===== represents the `other` branch changes.
+        - Keep whatever you want , remove markers & save.

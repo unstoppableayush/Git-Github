@@ -28,3 +28,15 @@
 > Set a Git email : `git config --global user.email "<email>"`
 
 > `.gitignore` -> Don't track some files or folders mentioned in this file
+
+> Create new : `git branch <BRANCH_NAME>`
+
+> Switch to other Branch : `git checkout <BRANCH_NAME>`
+
+> Check current branch : `git branch`
+
+> Create a branch & move there : `git switch -c <BRANCH_NAME>` , `git switch -c <BRANCH_NAME>`
+
+> Fast Forward Merge : `git merge <BRANCH_NAME>`
+
+> Not Fast Forward Merge : `git merge --no-ff bugfix`
