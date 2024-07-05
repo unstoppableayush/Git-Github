@@ -50,6 +50,7 @@ We will see behind the seen about git.
 - **`git rm -cached <file>`** - unstage the file.
 - `git commit` - commit needs a message , reason to commit the file.
 - `git commit -m "<msg>"`
+- `git commit -am "<msg>"` - adding and commiting at a same time.
 
 - **Stage Area**
     - `git init`
@@ -120,3 +121,67 @@ We will see behind the seen about git.
         - Above ===== represents the `master` branch changes.
         - Below ===== represents the `other` branch changes.
         - Keep whatever you want , remove markers & save.
+
+### Git Diff and stashing
+
+**Git diff**
+
+- `git diff` - Compare working with staging.
+- How to read diff
+    - ```
+        a -> file1 & b -> file2 (show diff b/w same file over time)
+        --- file 1  {indicates changes in file}
+        +++ file 2  {ndicates changes in file}
+        changes in lines & little preview of it
+      ```
+    - some times branch changes the symbols(++ , --) get interchanged.
+
+- `git diff --staged` - Shows the difference of file b/w current staging and previous staging.
+
+- Differnce b/w commit id - `git diff <commit_id> <commit_id>` or `git diff <commit_id>..<commit_id>`
+
+- Same above for branches also.(`git diff <branch>..<branch>`)
+
+**Git Stash**
+
+- create a repo, work & commit on main
+- switch to another branch & work
+- `conflicting changes` do not allow to switch branch , without commits.
+- `git stash` (you can switch branch)
+- `git stash pop` (bring back those changes)
+- Stash is just like temporary self where you can keep your code and move and come back here and pops the code from self.
+- We can also `pops` the stash changes to `other branches`.
+- `git stash list` - Gives a list of stashes.
+- `git stash apply stash{0}` - Apply the specific stash to the branch.
+-  *Optional*
+    - `git checkout -f <branch>` - forcefully changes the branch.
+    - `git stash apply` (apply chnages & keep them in stash)
+> Use stash very carefully.
+
+- *More Commands**
+    - `git checkout <Hash>`- (Detach Head): new branch
+    - Cheking out any commit moves the head to that particular commit.
+    - To get the previous head we have to use `git checkout <branch_name>` 
+    - Alternative - `git reflog`
+    - `git switch main` - (re-attach Head)
+    - `git checkout HEAD~2` (look at 2 commit prior)
+    - `git restore filename` (get back to last commit version)
+
+### Git rebase is not tha scary
+
+**Rebase**
+    - Re-write the history
+    - alternative to merging
+    - clean up tool (clean up commits)
+    - Never run this command on `master` or `main` branch.
+
+
+### How to make Pull Request and Open Source contribution
+
+1. `Talk`
+2. open an issue
+3. get the issue assigned
+4. work and `add value`
+5. make `PR` and iterate over it
+6. have `Patience`
+7. making PR is `not` a job guarantee.
